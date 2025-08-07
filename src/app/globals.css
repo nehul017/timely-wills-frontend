@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --bright: 158, 71%, 50%, 1;
+    --danger: 356, 80%, 50%, 1;
+    --danger-outline: 356, 80%, 50%, 0.5;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+
+  main{
+    background-color: #c8f4e4;
+  }
+
+  body.overflow-hidden {
+    overflow: hidden;
+  }
+
+  .success {
+    height: calc(100vh - 86px);
+  }
+
+  .reset-height {
+    height: calc(100vh - 118px);
+  }
+
+  .stripe-box-shadow {
+    box-shadow:
+      0px 1px 1px rgba(0, 0, 0, 0.03),
+      0px 3px 6px rgba(0, 0, 0, 0.02);
+  }
+
+  .h2 {
+    @apply text-[22px] font-bold lg:text-2xl;
+  }
+
+  .h3 {
+    @apply text-lg font-semibold lg:text-xl lg:font-bold;
+  }
+
+  .relationship {
+    @apply flex min-h-[89px] w-full cursor-pointer items-center justify-between gap-5 rounded-lg border border-[#8D9395] p-5 font-normal lg:w-[420px];
+  }
+
+  .card-wrapper {
+    @apply rounded-lg border border-[#00000033] bg-white p-6 lg:p-[30px];
+  }
+
+  .custom-delete-item {
+    color: #e51a29 !important;
+  }
+
+  .border-gradient {
+    margin-left: 10px;
+    max-width: fit-content;
+    border-radius: 6px;
+    position: relative;
+    background: linear-gradient(
+      166.04deg,
+      #25d998 14.89%,
+      #fff0cd 44.67%,
+      #dbffe5 69.04%
+    );
+    padding: 1px;
+  }
+
+  .dashed {
+    border: 1px dashed #25d998;
+  }
+
+  .custom-outline {
+    outline: 2px solid #e51a2980;
+  }
+
+  iframe {
+    border: none;
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #636b6599;
+    border-radius: 4px;
+  }
+
+  #header-bar {
+    display: none;
+  }
+
+  #pdf-controls {
+    display: none;
+  }
+
+  #pdf-renderer {
+    background: #f7f7f7;
+  }
+
+  #pdf-page-info {
+    @apply sr-only;
+  }
+
+  #pdf-page-wrapper {
+    margin: 0;
+  }
+
+  #pdf-page-wrapper:not(:first-child) {
+    @apply m-0 mt-8;
+  }
+
+  .custom-doc-viewer .react-pdf__Page__canvas {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+
+  #image-renderer {
+    background: #f7f7f7;
+  }
+}
